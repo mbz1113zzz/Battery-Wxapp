@@ -1,0 +1,52 @@
+<view class="all">
+<view style="background-image: url(../../../../image/xmzz.png);background-size: 100% 0%;" >
+<view class="login" style="height:330px;">
+    <image src="../../image/user.png" class="loginbg"></image>
+    <view class="userinfo">
+        <view class="title" id="user_name" bindtap="login">
+            <span>点击登录</span>
+        </view>
+        <view class="subtitle" id="shenfen">
+            <span>未登录</span>
+        </view>
+    </view>
+    
+    <!--<image src="../../image/personal_icon_arrow.png" class="person_arrow"></image>-->
+</view>
+<!-- 第一块 -->
+<view class="thirdblock">
+ <view class="item"  data-index="1">
+        <span>我的账户</span>
+    </view>
+    <view class="h1"></view>
+    <view class="item"  >
+        <span>购买历史</span>
+    </view>
+    <view class="h1"></view>
+    <view class="item"  data-index="2">
+        <span>浏览历史</span>
+    </view>
+</view>
+<!-- 第三块 -->
+<view class="h10"></view>
+<view class="thirdblock">
+    <view class="item"  data-index="5" >
+        <span>意见反馈</span>
+    </view>
+    <view class="h1"></view>
+    <view class="item"  data-index="4">
+        <span>关于我们</span>
+    </view>
+    <view class="h1"></view>
+    <view class="item" >
+        <span>加入我们</span>
+    </view>
+    <view class="h1"></view>
+    <view class="item" >
+        <span>设置</span>
+    </view>
+</view>
+<view class="h10"></view>
+<view class="h10"></view>
+</view>
+</view>

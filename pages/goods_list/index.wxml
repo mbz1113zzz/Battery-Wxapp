@@ -1,0 +1,27 @@
+<!-- 监听自定义事件 -->
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange" >
+
+  <view class='selection'>
+    <!-- 头部文字 -->
+     <image src='http://www.cpab.net.cn/upload/image/20180818/15345725568233091.jpg' ></image>
+      <text class='alll'>商品详情</text>
+      <text class='all'>Product Details</text>
+    <!-- 内容 -->
+    <view class='list-item' wx:for="{{HotImgUrls}}" wx:key="url" wx:for-item="item">
+      <!-- 文章图片 -->
+      <view class='list-item-image'>
+        <image src='{{item.url}}'  class="slide-image" mode='scaleToFill'></image>
+        <!-- 作者头像 -->
+      </view>
+      <!-- 文章内容 -->
+      <view >
+          <button class='button1' >¥</button>
+          <button class='button' bindtap='buttonTap'>加入购物车</button>
+          <modal title="恩施圣珍" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel">
+            <view>您确定要加入购物车吗</view>
+          </modal>
+        </view>
+    </view>
+  </view>
+
+</Tabs>

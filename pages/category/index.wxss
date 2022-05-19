@@ -1,0 +1,117 @@
+page {
+  height: 100%;
+}
+.cates {
+  height: 100%;
+}
+.cates .cates_container {
+  /* less中使用calc的时候要注意 */
+  height: calc( 100vh - 90rpx );
+  display: flex;
+}
+.cates .cates_container .left_menu {
+  /* 子项 高度 100% flex */
+  color: #2e2d2d;
+  flex: 2;
+}
+.cates .cates_container .left_menu .menu_item {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.cates .cates_container .left_menu .active {
+  color: #BFD68D;
+  border-left: 5rpx solid currentColor;
+}
+.cates .cates_container .right_content {
+  /* 子项 高度 100% flex */
+  flex: 5;
+}
+.cates .cates_container .right_content .goods_group .goods_title {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cates .cates_container .right_content .goods_group .goods_title .delimiter {
+  color: #ccc;
+  padding: 10 10rpx;
+}
+
+.cates .cates_container .right_content .goods_group navigator {
+  /* width:100%;
+  text-align: left; */
+  display: flex;
+ flex-direction: row;
+ margin-left: 0px
+}
+
+.cates .cates_container .right_content .goods_group .goods_name {
+  font-size: 40rpx;
+  height: 60rpx;
+}
+
+.cates .cates_container .right_content .goods_group .goods_name .all{
+  font-size: 14px;
+  color: rgb(255, 0, 0);
+}
+
+.cates .cates_container .right_content .goods_group .image {
+  width:330px;
+  height: 280rpx;
+  margin-top: 80px;
+  /* position: relative; */
+}
+.cates .cates_container .right_content .goods_group  .image1 {
+  width: 100%;
+  height: 380rpx;
+  margin-top: 10px;
+  /* position: relative; */
+}
+
+.view_wenzi1 {
+  width: 50px;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+
+  margin-top: 10px;
+ }
+
+
+.view_wenzi2 {
+  width: 250px;
+  font-size: 30rpx;
+  margin-left: 50px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+ }
+ .view_wenzi2 .all{
+  font-size: 9px;
+  color: rgb(255, 0, 0);
+}
+.text_middle{
+  margin-top: 15px;
+  font-size: 27rpx;
+  word-break:break-all;
+  color: #515151
+}
+
+ .text_small{
+  margin-top: 20px;
+  font-size: 37rpx;
+  word-break:break-all;
+  color: #ff0000
+ }
+
+ .text_yishou{
+  margin-top: 23px;
+  font-size: 27rpx;
+  word-break:break-all;
+  color: #515151
+}

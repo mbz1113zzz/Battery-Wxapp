@@ -1,0 +1,67 @@
+
+<view class="pyg_index">
+
+  <!-- 搜索框 开始 -->
+  <!-- <SearchInput></SearchInput> -->
+  <!-- 搜索框 结束 -->
+  <!-- 轮播图 开始 -->
+  <view class="index_swiper">
+    <swiper style='height:310rpx' autoplay indicator-dots circular>
+     <swiper-item>
+      <image src='../../image/bg-chenshi1.jpg' style="width: 100%;height:450rpx"></image>
+      </swiper-item>
+        <swiper-item>
+      <image src='../../image/bg-chenshi2.jpg' style="width: 100%;height:450rpx"></image>
+        </swiper-item>
+            <swiper-item>
+      <image src='https://img1.baidu.com/it/u=1813981384,418660133&fm=26&fmt=auto' style="width: 100%;height:456rpx"></image>
+        </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图 结束 -->
+  <view class='indexcontainer'>
+  <!-- 顶部推荐图片轮播 -->
+  <!-- 第二部分-->
+  <view class='selection'>
+    <!-- 头部文字 -->
+    <view class="header">
+      <text class='alll'>产品与服务<text class='all'>  PRODUCTS AND SERVICES</text></text>
+    </view>
+    <!-- 内容 -->
+    <view class='content'>
+      <view class='content-item' wx:for="{{contentImgUrls}}" wx:key="url" wx:for-item="item">
+        <image src="{{item.url}}" class="content-image" mode='scaleToFill'/>
+        <navigator  class='content-item-title' url="/pages/category/index" open-type='switchTab'>
+          <text>{{item.title}}</text>
+       </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 第三部分 -->
+  <view class='selection'>
+    <!-- 头部文字 -->
+    <view class="header">
+      <text class='alll'>关于我们<text class='all'>  ABOUT US</text></text>
+    </view>
+    <!-- 内容 -->
+    <view class='list-item' >
+      <!-- 文章图片 -->
+      <view class='list-item-image'>
+        <image src='../../image/sjln.png'  class="slide-image" mode='scaleToFill'></image>
+      </view>
+    <!-- 头部文字 -->
+    </view>
+        <view class="header">
+      <text class='alll'>项目主旨<text class='all'>  PROJECT THEME</text></text>
+    </view>
+    <!-- 内容 -->
+    <view class='list-item' >
+      <!-- 文章图片 -->
+      <view class='list-item-image' bindtap="readDetail">
+        <image src='../../image/xxzzhi.png'  class="slide-image1" mode='scaleToFill'></image>
+      </view>
+      <!-- 文章内容 -->
+    </view>
+  </view>
+</view>
+</view>
