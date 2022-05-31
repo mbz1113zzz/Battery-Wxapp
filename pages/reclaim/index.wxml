@@ -1,0 +1,145 @@
+<!--pages/reclaim/index.wxml-->
+<view class="index">
+  <van-cell-group inset class="v-group1">
+    <van-cell value="明细/重估" size="large" is-link bind:click="showPopup">
+      <view slot="title">
+        <view class="van-cell-text1" style="font-size:larger;">3000元</view>
+        <van-tag type="success">上门回收</van-tag>
+      </view>
+    </van-cell>
+  </van-cell-group>
+
+  <van-cell-group inset class="v-group2">
+    <van-cell value="关注" size="large">
+      <view slot="title">
+        <view class="van-cell-text2" style="font-size:larger;">xx电池</view>
+      </view>
+    </van-cell>
+    <van-cell title="已选产品" value="电池较为完好" size="large" is-link>
+    </van-cell>
+    <van-cell title="同款电池" value="回收方式" size="large" is-link>
+    </van-cell>
+  </van-cell-group>
+  <van-radio-group value="{{ radio }}" bind:change="onChange">
+    <van-cell-group inset class="v-group3">
+      <van-cell size="large" is-link>
+        <view slot="title">
+          <view class="van-cell-text3" style="font-size:larger;">选择收款方式</view>
+        </view>
+      </van-cell>
+      <van-cell title="微信收款" clickable data-name="1" bind:click="onClick">
+        <van-radio slot="right-icon" shape="square" name="1" />
+      </van-cell>
+      <van-cell title="支付宝收款" clickable data-name="2" bind:click="onClick">
+        <van-radio slot="right-icon" shape="square" name="2" />
+      </van-cell>
+    </van-cell-group>
+  </van-radio-group>
+
+  <van-cell-group inset class="v-group4">
+    <van-cell size="large" is-link bind:click="onAddress">
+      <view slot="title">
+        <view class="van-cell-text4" style="font-size:larger;">收货地址</view>
+      </view>
+    </van-cell>
+    <van-cell title="{{currentAddress}}">
+    </van-cell>
+  </van-cell-group>
+  <van-submit-bar
+  price="{{price*100}}"
+  button-text="提交订单"
+  button-type="primary"
+  bind:submit="onSubmit"
+  />
+</view>
+
+<van-dialog id="van-dialog"/>
+
+
+
+<van-popup class="popup"
+  show="{{ show }}"
+  closeable
+  position="bottom"
+  custom-style="height:50%;"
+  bind:close="onClose">
+  <view class="container" style="text-align: center;">
+    <van-button class="button1" plain round type="primary" bindtap="onButton1">价格明细</van-button>
+    <van-button class="button2" plain round type="primary" bindtap="onButton2">重新估价</van-button>
+  </view>
+</van-popup>
+
+<van-dialog
+  class="manage-address"
+  use-slot
+  title="收货地址管理"
+  show="{{ show1 }}"
+  show-cancel-button
+  show-confirm-button
+  close-on-click-overlay
+  bind:close="onCancel1"  
+  bind:confirm="onConfirm1"
+>
+  <van-radio-group value="{{ radio1 }}" bind:change="onChangeAdd">
+    <van-cell-group inset >
+      <van-cell wx:for="{{pcd_arr}}" wx:key="*this" title="{{item}}" clickable data-name="{{index}}" bind:click="onClick">
+        <van-radio slot="right-icon" shape="square" name="{{index}}" />
+      </van-cell>
+      <van-cell value="新增收货地址" clickable bind:click="onAddAddress">
+        <van-icon slot="right-icon" name="plus" class="custom-icon" />
+      </van-cell>
+    </van-cell-group>
+  </van-radio-group>
+</van-dialog>
+
+<van-dialog
+  class="add-address"
+  use-slot
+  title="新增收货地址"
+  show="{{ show2 }}"
+  show-cancel-button
+  show-confirm-button
+  close-on-click-overlay
+  bind:close="onCancel2"  
+  bind:confirm="onConfirm2"
+>
+  <van-cell-group>
+    <van-cell title="省市区选择" value="{{pcd}}" is-link bind:click="showRegion">
+    </van-cell>
+    <van-field 
+    value="{{detailAddress}}"
+    label="详细地址"
+    input-align="right"
+    bind:change="OnDetail"
+    bind:cancel="onCancel2"
+    bind:confirm="onConfirm2"
+    />
+  </van-cell-group>
+</van-dialog>
+
+<!-- <van-popup
+  show="{{ show3 }}"
+  position="bottom"
+  custom-style="height:50%;"
+>
+  <van-area 
+    area-list="{{ areaList }}"
+    columns-num="{{ 3 }}"
+    title="省市区选择"
+  />
+</van-popup> -->
+
+<van-dialog
+  use-slot
+  show="{{ show3 }}"
+  show-confirm-button=""
+  close-on-click-overlay
+>
+  <van-area 
+    area-list="{{ areaList }}"
+    columns-num="{{ 3 }}"
+    title="省市区选择"
+    bind:cancel="onCancel3"
+    bind:confirm="onConfirm3"
+  />
+</van-dialog>

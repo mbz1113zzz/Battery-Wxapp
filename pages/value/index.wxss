@@ -1,0 +1,36 @@
+/* pages/value/index.wxss */
+page {
+  background-color: white;
+}
+
+._title {
+  font-size: 50rpx;
+  margin-left: 35rpx;
+}
+
+._introduction {
+  font-size: 30rpx;
+  margin-left: 35rpx;
+}
+
+.canvas_container {
+  position: absolute;
+  left: 180rpx;
+}
+
+.text_container {
+  position: absolute;
+  font-size: 40rpx;
+  margin-top: 165rpx;
+  left: 340rpx;
+}
+
+.text_container {
+  text-align: center;
+}
+
+text {
+  font-size: 40rpx;
+  text-align: center;
+}
+

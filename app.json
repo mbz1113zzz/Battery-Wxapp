@@ -9,7 +9,12 @@
     "pages/login/index",
     "pages/auth/index",
     "pages/pay/index",
-    "pages/self/index"
+    "pages/self/index",
+    "pages/evaluate/index",
+    "pages/value/index",
+    "pages/show_data/index",
+    "pages/reclaim/index",
+    "pages/reclaim_success/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -38,10 +43,16 @@
         "selectedIconPath": "icons/sale-1.png"
       },
       {
-        "pagePath": "pages/cart/index",
-        "text": "购物车",
-        "iconPath": "icons/gouwu.png",
-        "selectedIconPath": "icons/gouwu-1.png"
+        "pagePath": "pages/evaluate/index",
+        "text": "估价",
+        "iconPath": "icons/sale.png",
+        "selectedIconPath": "icons/sale-1.png"
+      },
+      {
+        "pagePath": "pages/show_data/index",
+        "text": "数据",
+        "iconPath": "icons/sale.png",
+        "selectedIconPath": "icons/sale-1.png"
       },
       {
         "pagePath": "pages/self/index",

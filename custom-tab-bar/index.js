@@ -17,13 +17,6 @@ Component({
       updateActive: 'updateActiveTabBarIndex'
     },
   },
-  observers: {
-    'sum':function(val){
-      this.setData({
-        'list[2].info':val
-      })
-    }
-  },
   /**
    * 组件的属性列表
    */
@@ -49,11 +42,16 @@ Component({
         "selectedIconPath": "/icons/sale-1.png"
       },
       {
-        "pagePath": "/pages/cart/index",
-        "text": "购物车",
-        "iconPath": "/icons/gouwu.png",
-        "selectedIconPath": "/icons/gouwu-1.png",
-        info: 0
+        "pagePath": "/pages/evaluate/index",
+        "text": "估价",
+        "iconPath": "/icons/sale.png",
+        "selectedIconPath": "/icons/sale-1.png"
+      },
+      {
+        "pagePath": "/pages/show_data/index",
+        "text": "数据",
+        "iconPath": "/icons/sale.png",
+        "selectedIconPath": "/icons/sale-1.png"
       },
       {
         "pagePath": "/pages/self/index",

@@ -9,7 +9,28 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/category/index",
+          "pathName": "pages/value/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/show_data/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/reclaim/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/reclaim_success/index",
           "query": "",
           "launchMode": "default",
           "scene": null

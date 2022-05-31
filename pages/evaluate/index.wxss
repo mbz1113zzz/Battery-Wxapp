@@ -1,0 +1,22 @@
+/* pages/evaluate/index.wxss */
+
+page {
+  background-color: white;
+}
+
+._title {
+  font-size: 50rpx;
+  margin-left: 35rpx;
+}
+
+.btn1 {
+  font-size: 35rpx;  
+  color: rgb(98, 187, 238);
+  text-align: left;
+  background-color: transparent;
+  border: none;
+}
+
+.btn1::after {
+  border: none;
+}

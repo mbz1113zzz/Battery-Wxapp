@@ -1,0 +1,18 @@
+/* pages/reclaim/index.wxss */
+.popup {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button1 {
+  margin-bottom: 30rpx;
+}
+
+.index {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}

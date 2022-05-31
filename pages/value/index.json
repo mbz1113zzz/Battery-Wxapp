@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "mpProgress": "mp-progress/component/mp-progress",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-button": "@vant/weapp/button/index"
+  }
+}
